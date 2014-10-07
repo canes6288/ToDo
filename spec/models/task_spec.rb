@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Task do
-  before { @task = Task.new(title: "Walk the dog", completed: true, location: " ") }
+  before { @task = Task.new(title: "Walk the dog") }
 
   subject { @task }
 
@@ -45,7 +45,7 @@ describe Task do
 
     describe "location" do
       it "blank by default" do
-      expect(@task.location).to eq(" ")
+        expect(@task.location).to eq(" ")
       end
     end
   end
