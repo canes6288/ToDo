@@ -18,16 +18,27 @@ describe Task do
         it { should_not be_valid}
       end
 
-      describe "too short" do
+      describe "title too short" do
         before { @task.title = "a" * 2 }
-        it { should_not be_valid}
+        it { should_not be_valid }
       end
 
-      describe "too long" do
+      describe "title too long" do
         before { @task.title = "a" * 255 }
         it { should_not be_valid }
       end
     end
+
+
+
+    describe "location" do
+      describe "location too long" do
+        before { @task.location = "a" * 255 }
+        it { should_not be_valid }
+      end
+    end
+
+
 
     describe "completed" do
       it "false by default" do
