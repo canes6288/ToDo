@@ -22,19 +22,51 @@ describe TasksController, type: :controller do
   end
 
   describe "GET new" do
-      it "renders new page"
-    end
+    it "renders new page"
+  end
 
 
   describe "GET edit" do
   #Current Task: Walk the Dog
   #New Task : ...
-        it "finds requested task to edit"
-        it "renders edit page"
-    end
+    it "finds requested task to edit"
+    it "renders edit page"
+  end
 
   describe "GET index" do
-        it "finds all current saved tasks"
-        it "renders index page"
+    it "finds all current saved tasks"
+    it "renders index page"
+  end
+
+  describe "POST new" do
+    context "with valid attributes"
+      it "saves task to database"
+      it "adds task to ToDo list on index page"
+      it "redirects to index page"
+
+    context "with invalid attributes"
+      it "does not save task to database"
+      it "redirects to index page"
+  end
+
+  describe "PUT update ToDo tasks on index list" do
+    context "with valid attributes" do
+      it "finds current task in database"
+      it "assigns updated task to current task"
+      it "redirects to index ToDo list page"
     end
-end
+
+    context "with invalid attributes" do
+      it "does not reassign current task in database"
+      it "redirects to index page"
+    end
+  end
+
+  describe "DELETE task on ToDo index list" do
+    it "finds current task in database"
+    it "removes current task from database"
+  end
+
+
+
+  end
