@@ -34,14 +34,13 @@ describe TasksController, type: :controller do
   end
 
   describe "GET index" do
-    it "finds all current saved tasks"
+    it "assign all tasks to @tasks"
     it "renders index page"
   end
 
-  describe "POST new" do
+  describe "POST create" do
     context "with valid attributes"
       it "saves task to database"
-      it "adds task to ToDo list on index page"
       it "redirects to index page"
 
     context "with invalid attributes"
@@ -66,7 +65,4 @@ describe TasksController, type: :controller do
     it "finds current task in database"
     it "removes current task from database"
   end
-
-
-
-  end
+end
