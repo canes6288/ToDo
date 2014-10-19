@@ -46,7 +46,7 @@ describe Task do
   describe "priority" do
       it "blank by default" do
         new_task = Task.new(title: "Walk the dog")
-        expect(new_task.priority).to eq(0)
+        expect(new_task.priority).to eq(3)
       end
 
     describe "range" do

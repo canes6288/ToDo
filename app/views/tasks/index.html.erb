@@ -1,0 +1,25 @@
+<style>
+
+  .add_new_button {
+    margin-top: 20px;
+    margin-right: 26%;
+    position: right;
+  }
+</style>
+
+
+<title>Todo | My Tasks</title>
+<div class="row">
+  <div class="col-sm-9">
+    <h1>CheckList</h1>
+  </div>
+  <div class="col-sm-3">
+    <%= link_to 'Add New Task', new_task_path, class: "btn btn-default add_new_button pull-right" %>
+  </div>
+</div>
+</br>
+
+<%= render 'tasks/table' %>
+
+
+

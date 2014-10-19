@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20141007163712) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "completed",  default: false
-    t.integer  "priority",   default: 0
+    t.integer  "priority",   default: 3
     t.string   "location",   default: " "
   end
 

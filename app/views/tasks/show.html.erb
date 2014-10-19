@@ -1,4 +1,22 @@
 <title>Todo | Show Task</title>
-<h1>I need to...</h1>
+<h1>Task Added</h1>
+<br/>
+<%= link_to 'Edit Task', edit_task_path(@task.id) %>
+<br/>
+<br/>
 
-<p><%= @task.title %></p>
+<p> TITLE: <br/><%= @task.title %></p>
+<br/>
+
+<p> COMPLETED: <br/><%= @task.completed %></p>
+<br/>
+
+<p> PRIORITY: <br/><%= @task.priority %></p>
+<br/>
+
+
+
+
+
+<%= link_to 'View Checklist', tasks_path %>
+
