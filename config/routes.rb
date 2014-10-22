@@ -1,15 +1,22 @@
 Rails.application.routes.draw do
 
-  get '/home',           to: 'static_pages#home'
-  get '/about',          to: 'static_pages#about'
-  get '/help',           to: 'static_pages#help'
+  root 'static_pages#home'
 
+  match '/', to: 'static_pages#home',  via: 'get'
+  match '/home', to: 'static_pages#home', via: 'get'
+  match '/about', to: 'static_pages#about', via: 'get'
+  match '/help', to: 'static_pages#help', via: 'get'
+
+  match '/signup', to: 'users#new', via: 'get'
+  match '/signin', to: 'sessions#new', via: 'get'
 
   # We were about to do something like: post '/tasks', to: 'tasks#create'
   # Instead, we used resources:tasks
   # We then limit it to the show, new and create paths
 
   resources :tasks, only: [:show, :new, :create, :index, :edit, :update, :destroy]
+  resources :users, only: [:create, :show]
+  resources :sessions, only: [:create, :destroy]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

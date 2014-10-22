@@ -1,0 +1,21 @@
+<%= form_for(:sessions, url: sessions_path) do |form| %>
+
+  #%= render 'shared/error_messages', object: form.object %>
+
+  <div>
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+  <br/>
+
+  <div>
+    <%= form.label :password %>
+    <%= form.password_field :password %>
+  </div>
+  <br/>
+
+  <div>
+    <%= form.submit 'Sign In' %>
+  </div>
+
+<% end %>
